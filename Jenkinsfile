@@ -33,7 +33,7 @@ pipeline {
 		}		
         stage('Deploy to GKE') {
             steps{
-                sh "sed -i 's/inasagita/omoo:latest/omoo:${env.BUILD_ID}/g' deployment.yaml"
+                sh "sed -i 's/omoo:latest/omoo:${env.BUILD_ID}/g' deployment.yaml"
                 step([$class: 'KubernetesEngineBuilder', projectId: env.PROJECT_ID, clusterName: env.CLUSTER_NAME, location: env.LOCATION, manifestPattern: 'deployment.yaml', credentialsId: env.CREDENTIALS_ID, verifyDeployments: true])
             }
         }
