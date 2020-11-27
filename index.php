@@ -43,7 +43,7 @@ if (isset($_POST["cari"]) ) {
         }
     }
     </style>
-    <title>TEST</title>
+    <title>JUMAT TEST</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body class="h-vh-100 bg-brandColor2">
